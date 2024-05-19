@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  bachhoasi-api:
+    container_name: bachhoasi-api-management
+    image: bachhoasi-api
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      DB_URL: ${DB_URL}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_DATABASE}
+      PENV: ${PENV}
+      AWS_ACCESS_ID: ${AWS_ACCESS_ID}
+      BUCKET_NAME: ${BUCKET_NAME} 
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      PORT: ${PORT}
+      ACCESS_TOKEN_KEY: ${ACCESS_TOKEN_KEY}
+      ACCESS_TOKEN_EXT: ${ACCESS_TOKEN_EXT}
+      REFRESH_TOKEN_KEY: ${REFRESH_TOKEN_KEY}
+      REFRESH_TOKEN_EXT: ${REFRESH_TOKEN_EXT}
+      BASE_URL_API: ${BASE_URL_API}
+      ORIGIN_ALLOWED: ${ORIGIN_ALLOWED}
