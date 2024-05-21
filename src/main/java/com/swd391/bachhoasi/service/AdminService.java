@@ -4,6 +4,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 public interface AdminService extends BaseService {
 
-    UserDetails loadUserByUsername(String username);
+
     
 }

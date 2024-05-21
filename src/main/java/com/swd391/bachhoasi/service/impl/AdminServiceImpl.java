@@ -17,13 +17,6 @@ import java.util.Set;
 @AllArgsConstructor
 public class AdminServiceImpl implements AdminService {
 
-    private final AdminRepository adminRepository;
-    @Override
-    public UserDetails loadUserByUsername(String username) {
-        Admin admin = adminRepository.findByUsername(username);
-        GrantedAuthority authority = new SimpleGrantedAuthority(admin.getRole().name());
-        Set<GrantedAuthority> authorities = new HashSet<>();
-        authorities.add(authority);
-        return new User(admin.getUsername(), admin.getHashPassword(), authorities);
-    }
+
+
 }
